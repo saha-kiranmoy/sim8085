@@ -1,168 +1,393 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-  <div style="position: relative;">
-    <img src="mps85 new.png" onclick="myFunction()" alt="MPS85 Kit" usemap="#workmap">
-    <div>
-      <img style="position: absolute;left: 490px; top: 340px;" src="led on horizontal.png" alt="led on horizontal">
-      <img style="position: absolute;left: 485px; top: 342px;" src="led on vertical.png" alt="led on vertical">
+  </head>
+  <body>
+    <div style="position: relative">
+      <img
+        src="mps85 new.png"
+        onclick="myFunction()"
+        alt="MPS85 Kit"
+        usemap="#workmap"
+      />
+      <div>
+        <img
+          id="h1"
+          style="position: absolute; left: 490px; top: 340px"
+          src="led on horizontal.png"
+          alt="led on horizontal"
+        />
+        <img
+          id="h2"
+          style="position: absolute; left: 488px; top: 358px"
+          src="led on horizontal.png"
+          alt="led on horizontal"
+        />
+        <img
+          id="h3"
+          style="position: absolute; left: 485px; top: 374px"
+          src="led on horizontal.png"
+          alt="led on horizontal"
+        />
+        <img
+          id="v1"
+          style="position: absolute; left: 485px; top: 342px"
+          src="led on vertical.png"
+          alt="led on vertical"
+        />
+        <img
+          id="v2"
+          style="position: absolute; left: 481px; top: 360px"
+          src="led on vertical.png"
+          alt="led on vertical"
+        />
+        <img
+          id="v3"
+          style="position: absolute; left: 502px; top: 342px"
+          src="led on vertical.png"
+          alt="led on vertical"
+        />
+        <img
+          id="v4"
+          style="position: absolute; left: 498px; top: 360px"
+          src="led on vertical.png"
+          alt="led on vertical"
+        />
+      </div>
     </div>
-  </div>
     <script>
-        function myFunction() {
-          alert("You clicked on the kit");
-        }
+      var horizontalLed1 = document.getElementById("h1");
+      var horizontalLed2 = document.getElementById("h2");
+      var horizontalLed3 = document.getElementById("h3");
+      var verticalLed1 = document.getElementById("v1");
+      var verticalLed2 = document.getElementById("v2");
+      var verticalLed3 = document.getElementById("v3");
+      var verticalLed4 = document.getElementById("v4");
 
-        function resetFunction() {
-          alert("You clicked on the RESET button!");
-        }
-        function f1Function() {
-          alert("You clicked on the F1 button!");
-        }
-        function f2Function() {
-          alert("You clicked on the F2 button!");
-        }
-        function nextFunction() {
-          alert("You clicked on the NEXT button!");
-        }
+      function firstLed(control) {
+        // Toggle visibility of horizontal and vertical LEDs
+        horizontalLed1.style.display = control[0] ? "block" : "none";
+        horizontalLed2.style.display = control[1] ? "block" : "none";
+        horizontalLed3.style.display = control[2] ? "block" : "none";
+        verticalLed1.style.display = control[3] ? "block" : "none";
+        verticalLed2.style.display = control[4] ? "block" : "none";
+        verticalLed3.style.display = control[5] ? "block" : "none";
+        verticalLed4.style.display = control[6] ? "block" : "none";
+      }
 
+      var control = [1, 1, 1, 1, 1, 1, 1];
+      firstLed(control);
 
-        function kbFunction() {
-          alert("You clicked on the KB INT button!");
-        }
-        function insertFunction() {
-          alert("You clicked on the INSERT button!");
-        }
-        function deleteFunction() {
-          alert("You clicked on the DELETE button!");
-        }
-        function prevFunction() {
-          alert("You clicked on the PREV button!");
-        }
+      function myFunction() {
+        alert("You clicked on the kit");
+      }
 
-        function cFunction() {
-          alert("You clicked on the C button!");
-        }
-        function hFunction() {
-          alert("You clicked on the 8/H button!");
-        }
-        function sphFunction() {
-          alert("You clicked on the 4/SPH button!");
-        }
-        function zeroFunction() {
-          alert("You clicked on the 0 button!");
-        }
+      function resetFunction() {
+        alert("You clicked on the RESET button!");
+      }
+      function f1Function() {
+        alert("You clicked on the F1 button!");
+      }
+      function f2Function() {
+        alert("You clicked on the F2 button!");
+      }
+      function nextFunction() {
+        alert("You clicked on the NEXT button!");
+      }
 
-        function dFunction() {
-          alert("You clicked on the D button!");
-        }
-        function lFunction() {
-          alert("You clicked on the 9/L button!");
-        }
-        function splFunction() {
-          alert("You clicked on the 5/SPL button!");
-        }
-        function oneFunction() {
-          alert("You clicked on the 1 button!");
-        }
+      function kbFunction() {
+        alert("You clicked on the KB INT button!");
+      }
+      function insertFunction() {
+        alert("You clicked on the INSERT button!");
+      }
+      function deleteFunction() {
+        alert("You clicked on the DELETE button!");
+      }
+      function prevFunction() {
+        alert("You clicked on the PREV button!");
+      }
 
-        function eFunction() {
-          alert("You clicked on the E button!");
-        }
-        function aFunction() {
-          alert("You clicked on the A button!");
-        }
-        function pchFunction() {
-          alert("You clicked on the 6/PCH button!");
-        }
-        function twoFunction() {
-          alert("You clicked on the 2 button!");
-        }
+      function cFunction() {
+        alert("You clicked on the C button!");
+      }
+      function hFunction() {
+        alert("You clicked on the 8/H button!");
+      }
+      function sphFunction() {
+        alert("You clicked on the 4/SPH button!");
+      }
+      function zeroFunction() {
+        alert("You clicked on the 0 button!");
+      }
 
-        function fFunction() {
-          alert("You clicked on the F button!");
-        }
-        function bFunction() {
-          alert("You clicked on the B button!");
-        }
-        function pclFunction() {
-          alert("You clicked on the 7/PCL button!");
-        }
-        function IFunction() {
-          alert("You clicked on the 3/I button!");
-        }
+      function dFunction() {
+        alert("You clicked on the D button!");
+      }
+      function lFunction() {
+        alert("You clicked on the 9/L button!");
+      }
+      function splFunction() {
+        alert("You clicked on the 5/SPL button!");
+      }
+      function oneFunction() {
+        alert("You clicked on the 1 button!");
+      }
 
-        function inFunction() {
-          alert("You clicked on the IN BYTE button!");
-        }
-        function singleFunction() {
-          alert("You clicked on the SINGLE STEP button!");
-        }
-        function regFunction() {
-          alert("You clicked on the EXAM REG button!");
-        }
-        function goFunction() {
-          alert("You clicked on the GO button!");
-        }
+      function eFunction() {
+        alert("You clicked on the E button!");
+      }
+      function aFunction() {
+        alert("You clicked on the A button!");
+      }
+      function pchFunction() {
+        alert("You clicked on the 6/PCH button!");
+      }
+      function twoFunction() {
+        alert("You clicked on the 2 button!");
+      }
 
-        function outFunction() {
-          alert("You clicked on the OUT BYTE button!");
-        }
-        function blkFunction() {
-          alert("You clicked on the BLK MOVE button!");
-        }
-        function memFunction() {
-          alert("You clicked on the EXAM MEM button!");
-        }
-        function execFunction() {
-          alert("You clicked on the EXEC button!");
-        }
+      function fFunction() {
+        alert("You clicked on the F button!");
+      }
+      function bFunction() {
+        alert("You clicked on the B button!");
+      }
+      function pclFunction() {
+        alert("You clicked on the 7/PCL button!");
+      }
+      function IFunction() {
+        alert("You clicked on the 3/I button!");
+      }
+
+      function inFunction() {
+        alert("You clicked on the IN BYTE button!");
+      }
+      function singleFunction() {
+        alert("You clicked on the SINGLE STEP button!");
+      }
+      function regFunction() {
+        alert("You clicked on the EXAM REG button!");
+      }
+      function goFunction() {
+        alert("You clicked on the GO button!");
+      }
+
+      function outFunction() {
+        alert("You clicked on the OUT BYTE button!");
+      }
+      function blkFunction() {
+        alert("You clicked on the BLK MOVE button!");
+      }
+      function memFunction() {
+        alert("You clicked on the EXAM MEM button!");
+      }
+      function execFunction() {
+        alert("You clicked on the EXEC button!");
+      }
     </script>
     <map name="workmap">
-        <area shape="rect" coords="378,424,426,471" alt="Reset Button" onclick="resetFunction()">
-        <area shape="rect" coords="378,479,426,526" alt="F1 Button" onclick="f1Function()">
-        <area shape="rect" coords="378,534,426,582" alt="F2 Button" onclick="f2Function()">
-        <area shape="rect" coords="378,590,426,638" alt="Next Button" onclick="nextFunction()">
-        
-        <area shape="rect" coords="434,423,481,470" alt="KB Button" onclick="kbFunction()">
-        <area shape="rect" coords="434,479,481,526" alt="INSERT Button" onclick="insertFunction()">
-        <area shape="rect" coords="434,534,481,582" alt="DELETE Button" onclick="deleteFunction()">
-        <area shape="rect" coords="434,590,481,638" alt="PREV Button" onclick="prevFunction()">
+      <area
+        shape="rect"
+        coords="378,424,426,471"
+        alt="Reset Button"
+        onclick="resetFunction()"
+      />
+      <area
+        shape="rect"
+        coords="378,479,426,526"
+        alt="F1 Button"
+        onclick="f1Function()"
+      />
+      <area
+        shape="rect"
+        coords="378,534,426,582"
+        alt="F2 Button"
+        onclick="f2Function()"
+      />
+      <area
+        shape="rect"
+        coords="378,590,426,638"
+        alt="Next Button"
+        onclick="nextFunction()"
+      />
 
-        <area shape="rect" coords="513,426,560,470" alt="D Button" onclick="cFunction()">
-        <area shape="rect" coords="513,479,560,526" alt="8/H Button" onclick="hFunction()">
-        <area shape="rect" coords="513,534,560,582" alt="4/SPH Button" onclick="sphFunction()">
-        <area shape="rect" coords="513,590,560,638" alt="0 Button" onclick="zeroFunction()">
+      <area
+        shape="rect"
+        coords="434,423,481,470"
+        alt="KB Button"
+        onclick="kbFunction()"
+      />
+      <area
+        shape="rect"
+        coords="434,479,481,526"
+        alt="INSERT Button"
+        onclick="insertFunction()"
+      />
+      <area
+        shape="rect"
+        coords="434,534,481,582"
+        alt="DELETE Button"
+        onclick="deleteFunction()"
+      />
+      <area
+        shape="rect"
+        coords="434,590,481,638"
+        alt="PREV Button"
+        onclick="prevFunction()"
+      />
 
-        <area shape="rect" coords="566,426,615,470" alt="D Button" onclick="dFunction()">
-        <area shape="rect" coords="566,479,615,526" alt="L Button" onclick="lFunction()">
-        <area shape="rect" coords="566,534,615,582" alt="5/SPL Button" onclick="splFunction()">
-        <area shape="rect" coords="566,590,615,638" alt="1 Button" onclick="oneFunction()">
+      <area
+        shape="rect"
+        coords="513,426,560,470"
+        alt="D Button"
+        onclick="cFunction()"
+      />
+      <area
+        shape="rect"
+        coords="513,479,560,526"
+        alt="8/H Button"
+        onclick="hFunction()"
+      />
+      <area
+        shape="rect"
+        coords="513,534,560,582"
+        alt="4/SPH Button"
+        onclick="sphFunction()"
+      />
+      <area
+        shape="rect"
+        coords="513,590,560,638"
+        alt="0 Button"
+        onclick="zeroFunction()"
+      />
 
-        <area shape="rect" coords="622,426,670,470" alt="E Button" onclick="eFunction()">
-        <area shape="rect" coords="622,479,670,526" alt="A Button" onclick="aFunction()">
-        <area shape="rect" coords="622,534,670,582" alt="6/PCH Button" onclick="pchFunction()">
-        <area shape="rect" coords="622,590,670,638" alt="2" onclick="twoFunction()">
+      <area
+        shape="rect"
+        coords="566,426,615,470"
+        alt="D Button"
+        onclick="dFunction()"
+      />
+      <area
+        shape="rect"
+        coords="566,479,615,526"
+        alt="L Button"
+        onclick="lFunction()"
+      />
+      <area
+        shape="rect"
+        coords="566,534,615,582"
+        alt="5/SPL Button"
+        onclick="splFunction()"
+      />
+      <area
+        shape="rect"
+        coords="566,590,615,638"
+        alt="1 Button"
+        onclick="oneFunction()"
+      />
 
-        <area shape="rect" coords="677,426,721,470" alt="F Button" onclick="fFunction()">
-        <area shape="rect" coords="677,479,721,526" alt="B Button" onclick="bFunction()">
-        <area shape="rect" coords="677,534,721,582" alt="7/PCL Button" onclick="pclFunction()">
-        <area shape="rect" coords="677,590,721,638" alt="3/I Button" onclick="IFunction()">
+      <area
+        shape="rect"
+        coords="622,426,670,470"
+        alt="E Button"
+        onclick="eFunction()"
+      />
+      <area
+        shape="rect"
+        coords="622,479,670,526"
+        alt="A Button"
+        onclick="aFunction()"
+      />
+      <area
+        shape="rect"
+        coords="622,534,670,582"
+        alt="6/PCH Button"
+        onclick="pchFunction()"
+      />
+      <area
+        shape="rect"
+        coords="622,590,670,638"
+        alt="2"
+        onclick="twoFunction()"
+      />
 
-        <area shape="rect" coords="756,426,802,470" alt="IN BYTE Button" onclick="inFunction()">
-        <area shape="rect" coords="756,479,802,526" alt="SINGLE STEP Button" onclick="singleFunction()">
-        <area shape="rect" coords="756,534,802,582" alt="EXAM REG Button" onclick="regFunction()">
-        <area shape="rect" coords="756,590,802,638" alt="Go Button" onclick="goFunction()">
+      <area
+        shape="rect"
+        coords="677,426,721,470"
+        alt="F Button"
+        onclick="fFunction()"
+      />
+      <area
+        shape="rect"
+        coords="677,479,721,526"
+        alt="B Button"
+        onclick="bFunction()"
+      />
+      <area
+        shape="rect"
+        coords="677,534,721,582"
+        alt="7/PCL Button"
+        onclick="pclFunction()"
+      />
+      <area
+        shape="rect"
+        coords="677,590,721,638"
+        alt="3/I Button"
+        onclick="IFunction()"
+      />
 
-        <area shape="rect" coords="808,426,855,470" alt="OUT BYTE Button" onclick="outFunction()">
-        <area shape="rect" coords="808,479,855,526" alt="BLK MOVE Button" onclick="blkFunction()">
-        <area shape="rect" coords="808,534,855,582" alt="EXAM MEM Button" onclick="memFunction()">
-        <area shape="rect" coords="808,590,855,638" alt="EXEC Button" onclick="execFunction()">
+      <area
+        shape="rect"
+        coords="756,426,802,470"
+        alt="IN BYTE Button"
+        onclick="inFunction()"
+      />
+      <area
+        shape="rect"
+        coords="756,479,802,526"
+        alt="SINGLE STEP Button"
+        onclick="singleFunction()"
+      />
+      <area
+        shape="rect"
+        coords="756,534,802,582"
+        alt="EXAM REG Button"
+        onclick="regFunction()"
+      />
+      <area
+        shape="rect"
+        coords="756,590,802,638"
+        alt="Go Button"
+        onclick="goFunction()"
+      />
+
+      <area
+        shape="rect"
+        coords="808,426,855,470"
+        alt="OUT BYTE Button"
+        onclick="outFunction()"
+      />
+      <area
+        shape="rect"
+        coords="808,479,855,526"
+        alt="BLK MOVE Button"
+        onclick="blkFunction()"
+      />
+      <area
+        shape="rect"
+        coords="808,534,855,582"
+        alt="EXAM MEM Button"
+        onclick="memFunction()"
+      />
+      <area
+        shape="rect"
+        coords="808,590,855,638"
+        alt="EXEC Button"
+        onclick="execFunction()"
+      />
     </map>
-</body>
+  </body>
 </html>
-
